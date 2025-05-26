@@ -42,8 +42,18 @@
  * `danger`：用于向用户显示错误或危险信息。用于
  * 在自定义容器、徽章等中使用。
  * -------------------------------------------------------------------------- */
+/*front*/
+@font-face {
+    font-family: JetBrains Mono;
+    src: url("./font/JetBrainsMono.woff2") format("woff2");
+}
 
 :root {
+    --vp-font-family-mono: "JetBrains Mono", ui-monospace, "HarmonyOS Sans SC", "Microsoft YaHei";
+    --vp-font-family-base:
+        "HarmonyOS Sans SC", "Microsoft YaHei", "Punctuation SC", ui-sans-serif, system-ui,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    
     --vp-c-default-1: var(--vp-c-gray-1);
     --vp-c-default-2: var(--vp-c-gray-2);
     --vp-c-default-3: var(--vp-c-gray-3);
@@ -136,16 +146,9 @@ html {
         border-radius: 5px;
     }
 
-    code {
-        font-family:
-                "JetBrainsMono", ui-monospace, "Menlo", "Monaco", "Consolas", "Liberation Mono",
-                "Courier New", monospace;
-    }
-
-    body {
-        font-family:
-                "HarmonyOS_Sans", "HarmonyOS_Sans_SC", Inter, system-ui, Avenir, Helvetica, Arial,
-                sans-serif;
+    div {
+        -webkit-tap-highlight-color: transparent; /* 针对 WebKit 浏览器 */
+        touch-action: manipulation; /* 防止默认行为 */
     }
 }
 
