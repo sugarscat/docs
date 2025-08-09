@@ -4,12 +4,12 @@ const gitLink = "https://github.com/sugarscat/vitepress-template";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/",
+  base: "/docs",
   title: "Vitepress",
   description: "A VitePress Template",
   lastUpdated: true,
   cleanUrls: true,
-  head: [["link", { rel: "icon", href: "/favicon.svg" }]],
+  head: [["link", { rel: "icon", href: "/docs/favicon.svg" }]],
 
   rewrites: {
     "en/:rest*": ":rest*",
