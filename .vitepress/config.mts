@@ -1,10 +1,11 @@
 import { defineConfig } from "vitepress";
 
-const gitLink = "https://github.com/sugarscat/vitepress-template";
+const gitLink = "https://github.com/sugarscat/docs";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: "/docs",
+  lang: "en-US",
   title: "Vitepress",
   description: "A VitePress Template",
   lastUpdated: true,
@@ -36,6 +37,15 @@ export default defineConfig({
         ],
       },
     ],
+
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: 'UIEJ43Y5BA',
+        apiKey: '18dc92dd11264dd06ac232d42ec0bd09',
+        indexName: 'documentation',
+      }
+    },
 
     socialLinks: [{ icon: "github", link: gitLink }],
   },
