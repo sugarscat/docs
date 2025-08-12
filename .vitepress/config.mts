@@ -10,7 +10,7 @@ export default defineConfig({
   description: "A VitePress Template",
   lastUpdated: true,
   cleanUrls: true,
-  head: [["link", { rel: "icon", href: "/docs/favicon.svg" }]],
+  head: [["link", { rel: "icon", href: "./favicon.svg" }]],
 
   rewrites: {
     "en/:rest*": ":rest*",
@@ -23,6 +23,8 @@ export default defineConfig({
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: './favicon.svg',
+
     nav: [
       { text: "Home", link: "/" },
       { text: "Examples", link: "/markdown-examples" },
